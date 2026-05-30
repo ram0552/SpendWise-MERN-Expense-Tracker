@@ -13,6 +13,10 @@ import Profile from "../pages/profile/Profile";
 
 import ProtectedRoute from "./ProtectedRoute";
 
+import ResetPassword from "../pages/auth/ResetPassword";
+
+import ForgotPassword from "../pages/auth/ForgotPassword";
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -61,6 +65,19 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/forgot-password"
+        element={
+          <ForgotPassword />
+        }
+      />
+
+        <Route
+          path="/reset-password/:token"
+          element={
+            <ResetPassword />
+          }
+        />
     </Routes>
   );
 };

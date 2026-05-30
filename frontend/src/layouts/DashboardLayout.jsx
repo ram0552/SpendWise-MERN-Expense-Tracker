@@ -10,7 +10,13 @@ const DashboardLayout = ({ children }) => {
       <div className="flex-1 min-h-screen">
         <Navbar />
 
-        <div className="p-6">
+        <div  className="
+                  min-h-screen
+                  bg-gray-100
+                  dark:bg-slate-900
+                  text-black
+                  dark:text-white
+            ">
           {children}
         </div>
       </div>

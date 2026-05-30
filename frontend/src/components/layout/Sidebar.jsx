@@ -24,12 +24,12 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-64 bg-white shadow-lg min-h-screen p-5">
+    <div className="w-64 bg-white dark:bg-slate-800 shadow-lg min-h-screen p-5">
       <h1 className="text-3xl font-bold text-indigo-600 mb-10">
         SpendWise
       </h1>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 text-gray-700 dark:text-gray-200">
         <Link
           to="/"
           className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100"

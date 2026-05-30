@@ -147,8 +147,21 @@ const Transactions = () => {
 
   return (
     <DashboardLayout>
-      <div className="space-y-6">
-        <h1 className="text-3xl font-bold">
+      <div
+  className="
+  space-y-6
+  text-slate-900
+  dark:text-white
+  "
+>
+        <h1
+  className="
+  text-2xl
+  md:text-3xl
+  font-bold
+  dark:text-white
+  "
+>
           Transactions
         </h1>
 
@@ -169,10 +182,9 @@ const Transactions = () => {
           onChange={(e) =>
             setSearch(e.target.value)
           }
-          className="w-full p-3 border rounded-lg"
-        />
-        <div className="bg-white p-6 rounded-xl shadow-md">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          className="w-full p-3 border rounded-lg bg-white dark:bg-slate-800 dark:text-white dark:border-slate-600"/>
+        <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
     <input
       type="date"
@@ -184,8 +196,7 @@ const Transactions = () => {
             e.target.value,
         })
       }
-      className="p-3 border rounded-lg"
-    />
+      className="p-3 border rounded-lg bg-white dark:bg-slate-700 dark:text-white dark:border-slate-600"/>
 
     <input
       type="date"
@@ -197,8 +208,7 @@ const Transactions = () => {
             e.target.value,
         })
       }
-      className="p-3 border rounded-lg"
-    />
+      className="p-3 border rounded-lg bg-white dark:bg-slate-700 dark:text-white dark:border-slate-600"/>
 
     <select
       value={filters.type}
@@ -209,7 +219,15 @@ const Transactions = () => {
             e.target.value,
         })
       }
-      className="p-3 border rounded-lg"
+      className="
+            p-3
+            border
+            rounded-lg
+            bg-white
+            dark:bg-slate-700
+            dark:text-white
+            dark:border-slate-600
+            "
     >
       <option value="">
         All Types
@@ -225,15 +243,28 @@ const Transactions = () => {
     </select>
   </div>
 </div>
-<div className="flex justify-end">
-  <CSVLink
+<div
+  className="
+  flex
+  justify-center
+  md:justify-end
+  "
+>   <CSVLink
     data={transactions}
     filename="transactions-report.csv"
-    className="bg-green-600 text-white px-6 py-3 rounded-lg"
-  >
+        className="
+                  bg-green-600
+                  hover:bg-green-700
+                  text-white
+                  px-6
+                  py-3
+                  rounded-lg
+                  transition
+                  duration-200
+            "  >
     Export CSV
-  </CSVLink>
-</div>
+    </CSVLink>
+</div >
 
         <TransactionTable
           transactions={

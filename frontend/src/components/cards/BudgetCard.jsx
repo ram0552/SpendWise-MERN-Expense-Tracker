@@ -2,7 +2,7 @@ const BudgetCard = ({
   item,
 }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md p-6">
+    <div className="bg-white dark:bg-slate-800 rounded-xl shadow-md p-6">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">
           {item.category}

@@ -76,13 +76,22 @@ const Login = () => {
 
         <p className="mt-4 text-center">
           Don't have account?{" "}
-          <Link
-            to="/register"
-            className="text-indigo-600"
-          >
-            Register
-          </Link>
         </p>
+        <div className="flex justify-between items-center mt-4">
+            <Link
+              to="/register"
+              className="text-indigo-600 hover:underline"
+            >
+              Register
+            </Link>
+
+            <Link
+              to="/forgot-password"
+              className="text-indigo-600 hover:underline"
+            >
+              Forgot Password?
+            </Link>
+          </div>
       </form>
     </div>
   );

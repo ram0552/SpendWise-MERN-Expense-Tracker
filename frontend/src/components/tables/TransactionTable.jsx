@@ -14,11 +14,16 @@ const TransactionTable = ({
   );
 }
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-x-auto">
+    <div className="bg-white  rounded-xl shadow-md overflow-x-auto">
       
-      <table className="w-full">
-        <thead className="bg-slate-100">
-          <tr>
+      <table className="bg-white dark:bg-slate-800 w-full">
+        <thead className="
+          bg-slate-100
+          dark:bg-slate-700
+          text-gray-700
+          dark:text-gray-200
+          "
+        >          <tr>
             <th className="p-4 text-left">
               Type
             </th>
@@ -67,20 +72,20 @@ const TransactionTable = ({
 
               <td className="p-4">
                 <td className="p-4 flex gap-3">
-  <button
-    onClick={() => onEdit(item)}
-    className="bg-blue-500 text-white px-4 py-2 rounded-lg"
-  >
-    Edit
-  </button>
+                  <button
+                    onClick={() => onEdit(item)}
+                    className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                  >
+                    Edit
+                  </button>
 
-  <button
-    onClick={() => onDelete(item._id)}
-    className="bg-red-500 text-white px-4 py-2 rounded-lg"
-  >
-    Delete
-  </button>
-</td>
+                  <button
+                    onClick={() => onDelete(item._id)}
+                    className="bg-red-500 text-white px-4 py-2 rounded-lg"
+                  >
+                    Delete
+                  </button>
+                </td>
               </td>
             </tr>
           ))}
