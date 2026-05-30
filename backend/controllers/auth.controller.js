@@ -119,6 +119,8 @@ export const forgotPassword =
 
     try {
       console.log(req.body.email);
+      console.log(process.env.EMAIL_USER);
+      console.log(process.env.EMAIL_PASS ? "PASS FOUND" : "PASS MISSING");
       
       const user =
         await User.findOne({
